@@ -3,3 +3,12 @@
     width: 0px !important;
     content: none !important;
 }
+
+@media only screen and (max-width: 800px) {
+    #blogflex{
+        /* position: fixed !important; */
+        max-width: 300px !important;
+        flex: 300px !important;
+        padding-top: 30px !important;
+    }
+}
