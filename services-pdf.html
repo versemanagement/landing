@@ -1,4 +1,33 @@
 <!-- <embed src="services.pdf" width="800px" height="2100px" /> -->
-<embed src="services.pdf" width="100%" height="100%" />
+<!-- <embed src="services.pdf" width="100%" height="100%" /> -->
 
 <!-- <iframe src="services.pdf" style="width: 100%;height: 100%;border: none;"></iframe> -->
+<style>
+.desktop-pdf {
+    display: none;
+}
+
+.mobile-pdf {
+    display: block;
+}
+@media only screen  and (min-width : 1025px) {
+
+  .mobile-pdf {
+      display: none;
+  }
+
+  .desktop-pdf {
+      display: block;
+  }
+}
+</style>
+    <div class="outer-pdf" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+        <div class="pdf">
+            <iframe class="desktop-pdf" scrolling="auto" src="services.pdf" width="100%" height="90%" type='application/pdf' title="Title">
+                <p style="font-size: 110%;"><em>There is content being displayed here that your browser doesn't support.</em> <a href="URL HERE" target="_blank"> Please click here to attempt to view the information in a separate browser window. </a> Thanks for your patience!</p>
+            </iframe>
+            <iframe class="mobile-pdf" scrolling="auto" src="services.pdf" width="100%" height="90%" type='application/pdf' title="Title">
+                <p style="font-size: 110%;"><em>There is content being displayed here that your browser doesn't support.</em> <a href="URL HERE" target="_blank"> Please click here to attempt to view the information in a separate browser window. </a> Thanks for your patience!</p>
+            </iframe>
+        </div>
+    </div>
